@@ -1,0 +1,121 @@
+/* ============================================================
+   src/components/FoodItem/FoodItem.css
+   ============================================================ */
+
+.food-item {
+  background:    #fff;
+  border-radius: 12px;
+  border:        1px solid #f0f0f0;
+  overflow:      hidden;
+  transition:    box-shadow 0.2s, transform 0.2s;
+  cursor:        pointer;
+}
+.food-item:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transform:  translateY(-2px);
+}
+
+/* Image wrapper — position relative so we can overlay the button */
+.food-item-img-container {
+  position: relative;
+  overflow: hidden;
+}
+.food-item-image {
+  width:      100%;
+  height:     200px;
+  object-fit: cover;   /* Crop to fill the area */
+  display:    block;
+  transition: transform 0.3s;
+}
+.food-item:hover .food-item-image {
+  transform: scale(1.04);
+}
+
+/* Add / Quantity controls — positioned at the bottom-right of the image */
+.food-item-counter {
+  position: absolute;
+  bottom:   12px;
+  right:    12px;
+}
+
+/* "+" button when item not in cart */
+.add-btn {
+  width:         36px;
+  height:        36px;
+  border-radius: 50%;
+  background:    #fff;
+  border:        none;
+  font-size:     22px;
+  color:         #e8402a;
+  cursor:        pointer;
+  box-shadow:    0 2px 8px rgba(0,0,0,0.15);
+  display:       flex;
+  align-items:   center;
+  justify-content: center;
+  transition:    background 0.2s;
+}
+.add-btn:hover { background: #fff5f3; }
+
+/* − count + control row */
+.quantity-control {
+  display:       flex;
+  align-items:   center;
+  gap:           6px;
+  background:    #fff;
+  border-radius: 20px;
+  padding:       4px 10px;
+  box-shadow:    0 2px 8px rgba(0,0,0,0.15);
+}
+.quantity-control button {
+  background: none;
+  border:     none;
+  font-size:  18px;
+  color:      #e8402a;
+  cursor:     pointer;
+  line-height: 1;
+}
+.quantity-control span {
+  font-size:   15px;
+  font-weight: 600;
+  min-width:   16px;
+  text-align:  center;
+}
+
+/* Info below the image */
+.food-item-info {
+  padding: 14px;
+}
+
+.food-item-name-rating {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  margin-bottom:   6px;
+}
+.food-name {
+  font-size:   15px;
+  font-weight: 600;
+  color:       #262626;
+}
+.rating {
+  font-size: 13px;
+  color:     #888;
+}
+
+.food-item-desc {
+  font-size:   13px;
+  color:       #808080;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  /* Clamp to 2 lines with ellipsis */
+  display:           -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow:          hidden;
+}
+
+.food-item-price {
+  font-size:   16px;
+  font-weight: 700;
+  color:       #e8402a;
+}

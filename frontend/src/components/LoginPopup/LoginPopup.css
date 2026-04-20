@@ -1,0 +1,97 @@
+/* ============================================================
+   src/components/LoginPopup/LoginPopup.css
+   ============================================================ */
+
+/* Dark semi-transparent overlay behind the popup */
+.login-popup-overlay {
+  position:        fixed;
+  inset:           0;                        /* top:0 right:0 bottom:0 left:0 */
+  background:      rgba(0, 0, 0, 0.5);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  z-index:         999;                      /* Above everything */
+  animation:       fadeIn 0.2s ease;
+}
+
+/* The white popup card */
+.login-popup {
+  background:    #fff;
+  border-radius: 12px;
+  padding:       32px;
+  width:         100%;
+  max-width:     400px;
+  box-shadow:    0 8px 32px rgba(0,0,0,0.15);
+}
+
+/* Header row: title + close button */
+.login-popup-header {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  margin-bottom:   24px;
+}
+.login-popup-header h2 {
+  font-size:   22px;
+  font-weight: 600;
+  color:       #333;
+}
+
+/* ✕ close button */
+.close-btn {
+  background: none;
+  border:     none;
+  font-size:  18px;
+  cursor:     pointer;
+  color:      #999;
+}
+.close-btn:hover { color: #333; }
+
+/* Form layout */
+.login-popup-form {
+  display:        flex;
+  flex-direction: column;
+  gap:            14px;
+}
+
+/* Text inputs */
+.login-popup-form input {
+  border:        1px solid #ddd;
+  border-radius: 8px;
+  padding:       12px 14px;
+  font-size:     14px;
+  outline:       none;
+  transition:    border-color 0.2s;
+}
+.login-popup-form input:focus {
+  border-color: #e8402a;
+}
+
+/* Submit button */
+.submit-btn {
+  background:    #e8402a;
+  color:         #fff;
+  border:        none;
+  border-radius: 8px;
+  padding:       13px;
+  font-size:     15px;
+  font-weight:   500;
+  cursor:        pointer;
+  transition:    background 0.2s;
+  margin-top:    4px;
+}
+.submit-btn:hover { background: #c73520; }
+
+/* "Switch to Sign Up / Log In" text */
+.login-popup-toggle {
+  text-align:  center;
+  font-size:   13px;
+  color:       #666;
+  margin-top:  18px;
+}
+.login-popup-toggle span {
+  color:       #e8402a;
+  font-weight: 500;
+  cursor:      pointer;
+}
+.login-popup-toggle span:hover { text-decoration: underline; }

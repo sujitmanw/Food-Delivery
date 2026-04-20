@@ -1,0 +1,40 @@
+/* ============================================================
+   src/index.css  —  Global Styles
+   These styles apply to every component in the app.
+   ============================================================ */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Reset default browser styles */
+* {
+  padding:     0;
+  margin:      0;
+  box-sizing:  border-box;   /* padding/border included in element width */
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+/* Remove underline from all links; inherit text colour */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* The main content area — centered with 80% width */
+.app {
+  width: 80%;
+  margin: auto;
+  padding-top: 20px;
+}
+
+/* Reusable fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

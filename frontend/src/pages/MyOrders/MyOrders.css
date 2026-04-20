@@ -1,0 +1,118 @@
+/* ============================================================
+   src/pages/MyOrders/MyOrders.css
+   ============================================================ */
+
+.my-orders {
+  padding: 30px 0 60px;
+}
+.my-orders h2 {
+  font-size:     26px;
+  font-weight:   600;
+  color:         #262626;
+  margin-bottom: 24px;
+}
+
+.orders-msg {
+  text-align: center;
+  color:      #888;
+  font-size:  15px;
+  padding:    60px 0;
+}
+
+/* Stack of order cards */
+.orders-list {
+  display:        flex;
+  flex-direction: column;
+  gap:            16px;
+}
+
+/* Single order card */
+.order-card {
+  display:       flex;
+  align-items:   center;
+  gap:           20px;
+  background:    #fff;
+  border:        1px solid #f0f0f0;
+  border-radius: 12px;
+  padding:       18px 24px;
+  transition:    box-shadow 0.2s;
+}
+.order-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* Emoji icon on the left */
+.order-icon {
+  font-size:        32px;
+  background:       #fff5f3;
+  border-radius:    50%;
+  width:            56px;
+  height:           56px;
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  flex-shrink:      0;
+}
+
+/* Item text in the middle — grows to fill space */
+.order-details {
+  flex: 1;
+}
+.order-items {
+  font-size:     14px;
+  color:         #333;
+  margin-bottom: 4px;
+  line-height:   1.5;
+}
+.order-amount {
+  font-size:   15px;
+  font-weight: 600;
+  color:       #e8402a;
+  margin-bottom: 2px;
+}
+.order-count {
+  font-size: 13px;
+  color:     #999;
+}
+
+/* Status column on the right */
+.order-status-col {
+  display:        flex;
+  flex-direction: column;
+  align-items:    flex-end;
+  gap:            10px;
+  flex-shrink:    0;
+}
+
+/* Coloured dot + status label */
+.order-status {
+  display:     flex;
+  align-items: center;
+  gap:         6px;
+  font-size:   13px;
+  color:       #333;
+  font-weight: 500;
+}
+.status-dot {
+  width:        10px;
+  height:       10px;
+  border-radius: 50%;
+  display:      inline-block;
+}
+
+/* Track Order button */
+.track-btn {
+  background:    transparent;
+  border:        1px solid #e8402a;
+  color:         #e8402a;
+  border-radius: 20px;
+  padding:       7px 18px;
+  font-size:     13px;
+  cursor:        pointer;
+  transition:    all 0.2s;
+  white-space:   nowrap;
+}
+.track-btn:hover {
+  background: #e8402a;
+  color:      #fff;
+}

@@ -1,0 +1,49 @@
+/* ============================================================
+   src/pages/Home/Home.css
+   ============================================================ */
+
+/* Hero banner */
+.header {
+  height:           34vw;           /* Responsive height */
+  min-height:       300px;
+  max-height:       500px;
+  background:       linear-gradient(135deg, #fce5db 0%, #f8c5a8 100%);
+  border-radius:    16px;
+  display:          flex;
+  align-items:      flex-end;       /* Text sits toward the bottom */
+  padding:          0 6% 8%;
+  margin-bottom:    30px;
+}
+
+/* Text content inside the hero */
+.header-contents {
+  max-width: 50%;
+  animation: fadeIn 0.6s ease;
+}
+.header-contents h2 {
+  font-size:     clamp(22px, 3vw, 40px); /* Scales with viewport */
+  font-weight:   700;
+  color:         #3d0000;
+  margin-bottom: 12px;
+  line-height:   1.2;
+}
+.header-contents p {
+  font-size:     14px;
+  color:         #5a2020;
+  line-height:   1.6;
+  margin-bottom: 20px;
+}
+.header-contents button {
+  background:    #e8402a;
+  color:         #fff;
+  border:        none;
+  border-radius: 24px;
+  padding:       12px 32px;
+  font-size:     15px;
+  cursor:        pointer;
+  transition:    background 0.2s, transform 0.15s;
+}
+.header-contents button:hover {
+  background: #c73520;
+  transform:  scale(1.03);
+}
